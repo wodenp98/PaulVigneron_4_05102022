@@ -19,6 +19,14 @@ h1 {
     margin-right: 100px;
 }
 
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 2px 0;
+}
+  
 .logo {
     height: 50px;
     margin-left: 100px;
@@ -48,3 +56,33 @@ h1 {
     height: 200px;
     width: 200px;
 }
+
+.photographer-link {
+    text-align: center;
+  }
+  
+.photographer-name {
+    margin: 10px 0 2px;
+  }
+  
+.photographer-portrait {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+  }
+  
+.photographer-country {
+    font-size: 13px;
+    color: #901c1c;
+    margin: 2px 0;
+  }
+  
+.photographer-tagline {
+    font-size: 10px;
+  }
+  
+.photographer-price {
+    font-size: 9px;
+    color: #757575;
+  }
