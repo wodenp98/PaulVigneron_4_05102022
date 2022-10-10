@@ -3,7 +3,7 @@
             const response = await fetch("/data/photographers.json")
             const data = await response.json()
             console.log(data)
-            return data
+            return {photographers: data.photographers}
         } catch (error) {
             console.log(error)
         }
