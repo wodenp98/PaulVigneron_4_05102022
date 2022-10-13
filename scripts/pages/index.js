@@ -2,16 +2,16 @@
         try {
             const response = await fetch("/data/photographers.json")
             const data = await response.json()
-            console.log(data.photographers)
+
             return {photographers: data.photographers}
         } catch (error) {
             console.log(error)
         }
-    }
+    } 
 
 
     async function displayData(photographers) {
-        const photographersSection = document.querySelector(".photographer_section");
+        const photographersSection = document.querySelector(".photographer-section");
 
         photographers.forEach((photographer) => {
             const photographerModel = photographerFactory(photographer);
