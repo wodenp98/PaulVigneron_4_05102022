@@ -4,22 +4,15 @@ function mediaFactory(data) {
     function getMediaCardDOM() {
         const article = document.createElement("article");
 
+        const imageMedia = `<img src="/assets/images/${image}" alt="${title}" />`
+        const videoMedia = `<img src="/assets/images/${video}" alt="${title}" />`
 
-        // function isVideo() {
-        //     const video = document.createElement("video").setAttribute("src", `/assets/images/${video}`)
-        //     return video
-        // }
 
-        // isVideo()
-
-        // function isImage() {
-        //     const img = document.createElement("img").setAttribute("src", `/assets/images/${image}`)
-        //     return img
-        // }
-        // isImage()
-
-        article.innerHTML = `<p class="image-title">${title}</p>
-                            <span class="likes-number" aria-label="likes">${likes}</span>
+        article.innerHTML = `<div>
+                                ${image ? imageMedia : videoMedia}
+                                <p class="image-title">${title}</p>
+                                <span class="likes-number" aria-label="likes">${likes}</span>
+                            </div>
                             `;
         return article;
     }

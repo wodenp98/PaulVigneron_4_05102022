@@ -4,9 +4,36 @@
 
 .photograph-header {
     background-color: #FAFAFA;
-    height: 300px;
     margin: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    padding: 35px 50px 40px 50px;
 }
+
+.photograph-presentation h1 {
+    font-size: 64px;
+    color: #D3573C;
+    margin: 20px;
+}
+.photograph-presentation h2 {
+    font-size: 24px;
+    color: #901C1C;
+    margin: 20px;
+}
+.photograph-presentation p {
+    font-size: 18px;
+    color: #525252;
+    margin: 20px;
+}
+
+.photograph-image {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
 
 .contact_button {
     font-size: 20px;

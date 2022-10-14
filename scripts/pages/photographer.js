@@ -41,7 +41,7 @@ function headerPhotograph(photographer) {
 } 
 
 function displayMedia(medias) {
-    const mediasSection = document.querySelector(".photograph-medias");
+    const mediasSection = document.querySelector(".photograph-article");
 
     medias.forEach((media) => {
         const mediaModel = mediaFactory(media);
