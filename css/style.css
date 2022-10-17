@@ -86,3 +86,9 @@ p {
     font-size: 9px;
     color: #757575;
   }
+
+.image-lightbox {
+    width: 300px;
+    height: 300px;
+}
+  

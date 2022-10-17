@@ -28,6 +28,7 @@ function headerPhotograph(photographer) {
   const photographPresentation = document.querySelector(".photograph-presentation")
   const photographImg = document.querySelector(".photograph-image")
   const photographLikes = document.querySelector(".photograph-likes")
+  const contactPhotograph = document.querySelector(".contact-name")
  
   photographPresentation.innerHTML= `<h1>${photograph.name}</h1>
   <h2>${photograph.city}, ${photograph.country}</h2>
@@ -38,14 +39,18 @@ function headerPhotograph(photographer) {
   
   photographLikes.innerHTML = `<p>${photograph.likes} <i class="fa-sharp fa-solid fa-heart"></i></p>
   <p>${photograph.price}€ / jour</p>`
+
+
+  contactPhotograph.innerHTML = `Contactez-moi ${photograph.name}`
+
 } 
 
 function displayMedia(medias) {
     const mediasSection = document.querySelector(".photograph-article");
 
-    medias.forEach((media) => {
+    medias.forEach((media, index) => {
         const mediaModel = mediaFactory(media);
-        const mediaCardDOM = mediaModel.getMediaCardDOM();
+        const mediaCardDOM = mediaModel.getMediaCardDOM(index);
         mediasSection.appendChild(mediaCardDOM);
     });
 };
@@ -57,6 +62,9 @@ async function initPhotograph() {
     const [photographerObject, mediaObject] = await getPhotographersId(id)
     headerPhotograph(photographerObject)
     displayMedia(mediaObject)
+    lightboxOpen()
+    lightboxClose()
+    lightboxNext()
 };
 
 initPhotograph();
