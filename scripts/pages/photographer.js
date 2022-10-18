@@ -67,10 +67,7 @@ async function initPhotograph() {
   const [photographerObject, mediaObject] = await getPhotographersId(id);
   headerPhotograph(photographerObject);
   displayMedia(mediaObject);
-  lightboxOpen();
-  lightboxClose();
-  lightboxNext();
-  lightboxPrev();
+  lightboxGlobal();
 }
 
 initPhotograph();
