@@ -1,11 +1,10 @@
 function photographerFactory(data) {
-    const { name, id, city, country, tagline, price, portrait } = data;
+  const { name, id, city, country, tagline, price, portrait } = data;
 
+  function getUserCardDOM() {
+    const article = document.createElement("article");
 
-    function getUserCardDOM() {
-        const article = document.createElement( 'article' );
-
-        article.innerHTML = ` <a href="photographer.html?id=${id}" class="photographer-link" aria-label="${name}">
+    article.innerHTML = ` <a href="photographer.html?id=${id}" class="photographer-link" aria-label="${name}">
                                 <img src="/assets/photographers/${portrait}" class="photographer-portrait"  alt="photo de ${name}">
                                 <h2 class="photographer-name">${name}</h2>
                               </a>
@@ -13,8 +12,7 @@ function photographerFactory(data) {
                               <p class="photographer-tagline">${tagline}</p>
                               <p class="photographer-price">${price}€/jour</p>        
                             `;
-        return article
-
-    }
-    return { name, id, city, country, tagline, price, portrait, getUserCardDOM }
+    return article;
+  }
+  return { name, id, city, country, tagline, price, portrait, getUserCardDOM };
 }

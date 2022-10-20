@@ -19,9 +19,6 @@ async function getPhotographersId(id) {
     (media) => media.photographerId === parseInt(id)
   );
 
-  console.log(photographerObject);
-  console.log(mediaObject);
-
   return [photographerObject, mediaObject];
 }
 
@@ -44,7 +41,7 @@ function headerPhotograph(photographer) {
     `/assets/photographers/${photograph.portrait}`
   );
 
-  photographLikes.innerHTML = `<p>${photograph.likes} <i class="fa-sharp fa-solid fa-heart"></i></p>
+  photographLikes.innerHTML = `<p class="total-likes"></p>
   <p>${photograph.price}€ / jour</p>`;
 
   contactPhotograph.innerHTML = `Contactez-moi ${photograph.name}`;
@@ -67,6 +64,7 @@ async function initPhotograph() {
   const [photographerObject, mediaObject] = await getPhotographersId(id);
   headerPhotograph(photographerObject);
   displayMedia(mediaObject);
+  likesGlobal();
   lightboxGlobal();
 }
 

@@ -134,8 +134,9 @@ p {
   }
 
   .fa-solid {
-    color: #901c1c;
+    font-weight: 900;
   }
+
   
   .lightbox-right {
     position: absolute;

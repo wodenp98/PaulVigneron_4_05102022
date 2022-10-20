@@ -12,7 +12,15 @@ function mediaFactory(data) {
                              </a>
                              <div class="article-infos">
                                 <p class="article-title">${title}</p>
-                                <span class="article-likes" aria-label="likes">${likes}<i class="article-icon fa-sharp fa-solid fa-heart"></i></span>
+                                <div class="article-likes" aria-label="likes">
+                                <span>${likes}</span>
+                                 <span class="article-icon empty-heart" >
+                                  <i class="fa-regular fa-heart"></i> 
+                                 </span>
+                                 <span class="article-icon full-heart">
+                                  <i class="fa-solid fa-heart"></i> 
+                                 </span>
+                                </div>   
                             </div>
                             `;
     article.classList.add("article-portfolio");

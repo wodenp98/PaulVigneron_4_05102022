@@ -2,11 +2,14 @@
 <html>
   <head>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="/assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/a31756020a.js" crossorigin="anonymous"></script>
-    <title>Fisheye - photographe </title>
+    <title>Fisheye - photographe</title>
   </head>
   <body>
     <header id="header">
@@ -16,10 +19,16 @@
     </header>
     <main id="main">
       <div class="photograph-header">
-        <div class="photograph-presentation">
-        </div>
-        <button id="contact" class="contact-button" aria-label="Contact me" onclick="displayModal()">Contactez-moi</button>
-        <img class="photograph-image">
+        <div class="photograph-presentation"></div>
+        <button
+          id="contact"
+          class="contact-button"
+          aria-label="Contact me"
+          onclick="displayModal()"
+        >
+          Contactez-moi
+        </button>
+        <img class="photograph-image" />
       </div>
       <div class="photograph-article"></div>
       <div class="photograph-likes"></div>
@@ -34,71 +43,68 @@
       <button class="lightbox-right">
         <i class="fa-sharp fa-solid fa-chevron-right"></i>
       </button>
-      <div class="lightbox-image">
-      </div>
+      <div class="lightbox-image"></div>
     </div>
     <div id="contact_modal">
-			<div class="modal">
-				<header>
+      <div class="modal">
+        <header>
           <h2 class="contact-name"></h2>
           <img src="/assets/icons/close.svg" onclick="closeModal()" />
         </header>
-				<form
-              id="form"
-              name="form"
-              method="post"
-              aria-label="Contact"
-            >
-              <div class="formData">
-                <label for="first-name">Prénom</label>
-                <input
-                  class="text-control"
-                  type="text"
-                  id="first-name"
-                  name="first-name"
-                  aria-label="First name"
-                />
-                <p id="firstNameErrorMsg" class="errorMsg"></p>
-              </div>
-              <div class="formData">
-                <label for="last-name">Nom</label>
-                <input
-                  class="text-control"
-                  type="text"
-                  id="last-name"
-                  name="last-name"
-                  aria-label="Last name"
-                />
-                <p id="lastNameErrorMsg" class="errorMsg"></p>
-              </div>
-              <div class="formData">
-                <label for="email">E-mail</label>
-                <input
-                  class="text-control"
-                  type="text"
-                  id="email"
-                  name="email"
-                  aria-label="Email"
-                />
-                <p id="emailErrorMsg" class="errorMsg"></p>
-              </div>
-              <div
-                class="formData formMessage">
-                <label for="message">Votre message</label>
-                <textarea 
-                    name="message" 
-                    id="message" 
-                    aria-label="Your message"></textarea>
-                    <p id="messageError" class="errorMsg"></p>
-              </div>
-              <button id="submit" class="contact-button" aria-label="Send" >Envoyer</button>
-            </form>
-			</div>
-		</div>
+        <form id="form" name="form" method="post" aria-label="Contact">
+          <div class="formData">
+            <label for="first-name">Prénom</label>
+            <input
+              class="text-control"
+              type="text"
+              id="first-name"
+              name="first-name"
+              aria-label="First name"
+            />
+            <p id="firstNameErrorMsg" class="errorMsg"></p>
+          </div>
+          <div class="formData">
+            <label for="last-name">Nom</label>
+            <input
+              class="text-control"
+              type="text"
+              id="last-name"
+              name="last-name"
+              aria-label="Last name"
+            />
+            <p id="lastNameErrorMsg" class="errorMsg"></p>
+          </div>
+          <div class="formData">
+            <label for="email">E-mail</label>
+            <input
+              class="text-control"
+              type="text"
+              id="email"
+              name="email"
+              aria-label="Email"
+            />
+            <p id="emailErrorMsg" class="errorMsg"></p>
+          </div>
+          <div class="formData formMessage">
+            <label for="message">Votre message</label>
+            <textarea
+              name="message"
+              id="message"
+              aria-label="Your message"
+            ></textarea>
+            <p id="messageError" class="errorMsg"></p>
+          </div>
+          <button id="submit" class="contact-button" aria-label="Send">
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </div>
     <script src="/scripts/factories/photographer.js"></script>
     <script src="/scripts/factories/media.js"></script>
     <script src="/scripts/pages/photographer.js"></script>
     <script src="/scripts/utils/contactForm.js"></script>
     <script src="/scripts/utils/lightbox.js"></script>
+    <script src="/scripts/utils/likes.js"></script>
   </body>
 </html>

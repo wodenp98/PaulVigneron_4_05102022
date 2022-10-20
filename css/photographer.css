@@ -84,7 +84,7 @@
 }
 
 .article-icon {
-    padding-left: 10px;
+    margin-left: 10px;
 }
 
 
@@ -175,3 +175,10 @@ form textarea {
     font-size: 18px;
 }
 
+.full-heart {
+    display: none;
+}
+
+.empty-heart {
+    display: inline-block;
+}
