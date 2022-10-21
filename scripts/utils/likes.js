@@ -5,7 +5,6 @@ function total() {
 
   likes.forEach((element) => {
     const likeCount = Number(element.textContent);
-    console.log(likeCount);
     total += likeCount;
   });
   const displayTotal =

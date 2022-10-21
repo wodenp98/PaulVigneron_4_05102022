@@ -57,6 +57,33 @@ function displayMedia(medias) {
   });
 }
 
+function filters(medias) {
+  const filterSystem = document.getElementById("filter");
+
+  filterSystem.addEventListener("change", (e) => {
+    if (e.target.value === "Date") {
+      const mediaDate = medias.map((media) => media.date);
+      console.log(mediaDate);
+      mediaDate.sort(function (a, b) {
+        return new Date(b) - new Date(a);
+      });
+      console.log(mediaDate);
+    }
+    if (e.target.value === "Popularité") {
+      const mediaLike = medias.map((media) => media.likes);
+      console.log(mediaLike);
+      mediaLike.sort();
+      console.log(mediaLike);
+    }
+    if (e.target.value === "Titre") {
+      const mediaTitle = medias.map((media) => media.title);
+      console.log(mediaTitle);
+      mediaTitle.sort();
+      console.log(mediaTitle);
+    }
+  });
+}
+
 async function initPhotograph() {
   let url = new URLSearchParams(window.location.search);
   let id = url.get("id");
@@ -64,6 +91,7 @@ async function initPhotograph() {
   const [photographerObject, mediaObject] = await getPhotographersId(id);
   headerPhotograph(photographerObject);
   displayMedia(mediaObject);
+  filters(mediaObject);
   likesGlobal();
   lightboxGlobal();
 }
