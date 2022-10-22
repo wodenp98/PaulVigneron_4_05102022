@@ -59,26 +59,30 @@ function displayMedia(medias) {
 
 function filters(medias) {
   const filterSystem = document.getElementById("filter");
+  console.log(medias);
 
   filterSystem.addEventListener("change", (e) => {
     if (e.target.value === "Date") {
-      const mediaDate = medias.map((media) => media.date);
-      console.log(mediaDate);
-      mediaDate.sort(function (a, b) {
-        return new Date(b) - new Date(a);
+      const mediaDate = medias.sort(function (a, b) {
+        return new Date(b.date) - new Date(a.date);
       });
       console.log(mediaDate);
+      // medias.forEach((media) => {
+      //   const mediaModel = mediaFactory(media);
+      //   const mediaCardDOM = mediaModel.getMediaCardDOM(mediaDate);
+      //   console.log(mediaCardDOM);
+      // });
     }
     if (e.target.value === "Popularité") {
-      const mediaLike = medias.map((media) => media.likes);
-      console.log(mediaLike);
-      mediaLike.sort();
+      const mediaLike = medias.sort(function (a, b) {
+        return a.likes < b.likes ? 1 : -1;
+      });
       console.log(mediaLike);
     }
     if (e.target.value === "Titre") {
-      const mediaTitle = medias.map((media) => media.title);
-      console.log(mediaTitle);
-      mediaTitle.sort();
+      const mediaTitle = medias.sort(function (a, b) {
+        return a.title < b.title ? -1 : 1;
+      });
       console.log(mediaTitle);
     }
   });
