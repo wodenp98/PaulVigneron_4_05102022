@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
@@ -14,7 +14,7 @@
   <body>
     <header id="header">
       <a href="index.html">
-        <img src="/assets/images/logo.png" class="logo" />
+        <img src="/assets/images/logo.png" class="logo" alt="Logo Fisheye"/>
       </a>
     </header>
     <main id="main">
@@ -28,7 +28,7 @@
         >
           Contactez-moi
         </button>
-        <img class="photograph-image" />
+        <img class="photograph-image" alt=""/>
       </div>
       <div class="photograph-filter">
         <label for="filter">Trier par</label>
@@ -43,13 +43,13 @@
     </main>
     <div id="lightbox" role="dialog">
       <button class="close" onclick="lightboxClose()">
-        <i class="fa-solid fa-xmark fa-4x" alt="Close dialog"></i>
+        <div class="fa-solid fa-xmark fa-4x" alt="Close dialog"></div>
       </button>
       <button class="lightbox-left">
-        <i class="fa-solid fa-chevron-left fa-4x"></i>
+        <div class="fa-solid fa-chevron-left fa-4x"></div>
       </button>
       <button class="lightbox-right">
-        <i class="fa-sharp fa-solid fa-chevron-right  fa-4x"></i>
+        <div class="fa-sharp fa-solid fa-chevron-right  fa-4x"></div>
       </button>
       <div class="lightbox-image"></div>
     </div>
@@ -57,7 +57,7 @@
       <div class="modal">
         <header>
           <h2 class="contact-name"></h2>
-          <img src="/assets/icons/close.svg" onclick="closeModal()" />
+          <img src="/assets/icons/close.svg" alt="Bouton de fermerture de la modale" onclick="closeModal()" />
         </header>
         <form id="form" name="form" method="post" aria-label="Contact">
           <div class="formData">

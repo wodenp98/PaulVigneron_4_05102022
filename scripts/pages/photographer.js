@@ -41,6 +41,7 @@ function headerPhotograph(photographer) {
     "src",
     `/assets/photographers/${photograph.portrait}`
   );
+  photographImg.setAttribute("alt", `photo de ${photograph.name}`);
 
   photographLikes.innerHTML = `<p class="total-likes"></p>
   <p>${photograph.price}€ / jour</p>`;
