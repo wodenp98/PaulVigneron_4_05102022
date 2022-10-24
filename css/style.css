@@ -95,9 +95,9 @@ p {
 #lightbox {
     display: none;
     position: fixed;
-    width: 900px;
+    width: 1150px;
     top: 4%;
-    right: 20%;
+    right: 13%;
     z-index: 1;
   }
   
@@ -107,13 +107,20 @@ p {
     justify-content: center;
     width: fit-content;
     margin: auto;
+
+  }
+  .lightbox-image p {
+    color: #901C1C;
+    margin-top: 10px;
+    font-size: 20px;
   }
   
   .image-lightbox {
     object-fit: cover;
+    object-position: 50% 25%;
     border-radius: 5px;
     width: 700px;
-    height: 720px;
+    height: 650px;
   }
   
   .image-lightbox-title {
@@ -135,6 +142,7 @@ p {
 
   .fa-solid {
     font-weight: 900;
+    color: #901C1C
   }
 
   
@@ -149,3 +157,45 @@ p {
     top: 50%;
     left: 40px;
   }
+
+  .photograph-filter {
+    margin: 30px 100px;
+}
+
+.photograph-filter label {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+#filter {
+    background-color: #901c1c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.filter-option {
+    background-color: #901c1c;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.photograph-likes {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    right: 270px;
+    background-color: #db8876;
+    width: 376px;
+    height: 60px;
+    border-radius: 5px 5px 0 0;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 500;
+}
