@@ -1,3 +1,4 @@
+let medias = [];
 async function getPhotographers() {
   try {
     const response = await fetch("/data/photographers.json");
@@ -47,8 +48,9 @@ function headerPhotograph(photographer) {
   contactPhotograph.innerHTML = `Contactez-moi ${photograph.name}`;
 }
 
-function displayMedia(medias) {
+function displayMedia() {
   const mediasSection = document.querySelector(".photograph-article");
+  mediasSection.innerHTML = "";
 
   medias.forEach((media, index) => {
     const mediaModel = mediaFactory(media);
@@ -57,35 +59,34 @@ function displayMedia(medias) {
   });
 }
 
-function filters(medias) {
+function filters() {
   const filterSystem = document.getElementById("filter");
   console.log(medias);
 
   filterSystem.addEventListener("change", (e) => {
-    if (e.target.value === "Date") {
-      const mediaDate = medias.sort(function (a, b) {
-        return new Date(b.date) - new Date(a.date);
-      });
-      console.log(mediaDate);
-      // medias.forEach((media) => {
-      //   const mediaModel = mediaFactory(media);
-      //   const mediaCardDOM = mediaModel.getMediaCardDOM(mediaDate);
-      //   console.log(mediaCardDOM);
-      // });
-    }
-    if (e.target.value === "Popularité") {
-      const mediaLike = medias.sort(function (a, b) {
-        return a.likes < b.likes ? 1 : -1;
-      });
-      console.log(mediaLike);
-    }
-    if (e.target.value === "Titre") {
-      const mediaTitle = medias.sort(function (a, b) {
-        return a.title < b.title ? -1 : 1;
-      });
-      console.log(mediaTitle);
-    }
+    sortMedia(e.target.value);
   });
+}
+
+function sortMedia(type) {
+  if (type === "Date") {
+    const mediaDate = medias.sort(function (a, b) {
+      return new Date(b.date) - new Date(a.date);
+    });
+    displayMedia(mediaDate);
+  }
+  if (type === "Popularité") {
+    const mediaLike = medias.sort(function (a, b) {
+      return a.likes < b.likes ? 1 : -1;
+    });
+    displayMedia(mediaLike);
+  }
+  if (type === "Titre") {
+    const mediaTitle = medias.sort(function (a, b) {
+      return a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1;
+    });
+    displayMedia(mediaTitle);
+  }
 }
 
 async function initPhotograph() {
@@ -93,9 +94,11 @@ async function initPhotograph() {
   let id = url.get("id");
 
   const [photographerObject, mediaObject] = await getPhotographersId(id);
+  medias = mediaObject;
   headerPhotograph(photographerObject);
-  displayMedia(mediaObject);
-  filters(mediaObject);
+  displayMedia();
+  sortMedia("Popularité");
+  filters();
   likesGlobal();
   lightboxGlobal();
 }
