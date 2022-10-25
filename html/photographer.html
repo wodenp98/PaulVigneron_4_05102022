@@ -12,18 +12,19 @@
     <title>Fisheye - photographe</title>
   </head>
   <body>
-    <header id="header">
-      <a href="index.html">
+    <header id="header" role="banner">
+      <a href="index.html" aria-label="To the homepage" tabindex="1">
         <img src="/assets/images/logo.png" class="logo" alt="Fisheye Home page"/>
       </a>
     </header>
-    <main id="main">
+    <main id="main" aria-label="Profile page">
       <div class="photograph-header">
         <div class="photograph-presentation"></div>
         <button
           id="contact"
           class="contact-button"
           aria-label="Contact me"
+          tabindex="4"
           onclick="displayModal()"
         >
           Contactez-moi
@@ -32,10 +33,10 @@
       </div>
       <div class="photograph-filter">
         <label for="filter">Trier par</label>
-        <select name="Order by" id="filter">
-          <option class="filter-option" id="popularity" selected>Popularité</option>
-          <option class="filter-option" id="date">Date</option>
-          <option class="filter-option" id="title">Titre</option>
+        <select name="Order by" id="filter" tabindex="3">
+          <option class="filter-option" id="popularity" tabindex="3">Popularité</option>
+          <option class="filter-option" id="date" tabindex="3">Date</option>
+          <option class="filter-option" id="title" tabindex="3">Titre</option>
         </select>
       </div>
       <div class="photograph-article"></div>
@@ -102,7 +103,7 @@
             ></textarea>
             <p id="messageError" class="errorMsg"></p>
           </div>
-          <button id="submit" class="contact-button" aria-label="Send">
+          <button id="submit" class="form-button" aria-label="Send">
             Envoyer
           </button>
         </form>

@@ -1,11 +1,12 @@
+// eslint-disable-next-line no-unused-vars
 function mediaFactory(data) {
   const { date, id, image, video, likes, photographerId, price, title } = data;
 
   function getMediaCardDOM(index) {
     const article = document.createElement("article");
 
-    const imageMedia = `<img src="/assets/images/${image}" alt="${title}, closeup view" class="article-image" data-index="${index}" />`;
-    const videoMedia = `<video controls src="/assets/images/${video}" alt="${title}, closeup view" class="article-image" data-index="${index}" />`;
+    const imageMedia = `<img src="/assets/images/${image}" alt="${title}" class="article-image" data-index="${index}" />`;
+    const videoMedia = `<video controls src="/assets/images/${video}" alt="${title}" class="article-image" data-index="${index}" />`;
 
     article.innerHTML = `<a aria-label="${title}" class="article-link" >
                                 ${image ? imageMedia : videoMedia}

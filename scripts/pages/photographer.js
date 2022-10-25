@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 let medias = [];
 async function getPhotographers() {
   try {

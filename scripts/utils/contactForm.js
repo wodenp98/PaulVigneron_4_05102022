@@ -3,6 +3,7 @@ const modal = document.getElementById("contact_modal");
 const header = document.getElementById("header");
 const main = document.getElementById("main");
 
+// eslint-disable-next-line no-unused-vars
 function displayModal() {
   modal.style.display = "block";
   header.style.display = "none";
@@ -108,4 +109,10 @@ form.addEventListener("submit", (e) => {
   validate();
   resetBorder();
   form.reset();
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.keyCode === 27) {
+    closeModal();
+  }
 });

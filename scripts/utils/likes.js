@@ -56,6 +56,7 @@ function dislike() {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 function likesGlobal() {
   total();
   like();
