@@ -4,10 +4,10 @@ function mediaFactory(data) {
   function getMediaCardDOM(index) {
     const article = document.createElement("article");
 
-    const imageMedia = `<img src="/assets/images/${image}" alt="${title}" class="article-image" data-index="${index}" />`;
-    const videoMedia = `<video controls src="/assets/images/${video}" alt="${title}" class="article-image" data-index="${index}" />`;
+    const imageMedia = `<img src="/assets/images/${image}" alt="${title}, closeup view" class="article-image" data-index="${index}" />`;
+    const videoMedia = `<video controls src="/assets/images/${video}" alt="${title}, closeup view" class="article-image" data-index="${index}" />`;
 
-    article.innerHTML = `<a aria-label="${title}" class="article-link">
+    article.innerHTML = `<a aria-label="${title}" class="article-link" >
                                 ${image ? imageMedia : videoMedia}
                              </a>
                              <div class="article-infos">

@@ -101,6 +101,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+.contact-button:hover {
+    color: black;
+    background-color: #db8876;
+}
 
 
 .modal {
