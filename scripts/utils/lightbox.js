@@ -94,6 +94,9 @@ left.addEventListener("click", (e) => {
 });
 
 window.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.target.click();
+  }
   if (e.key === "Escape") {
     lightboxClose();
   }

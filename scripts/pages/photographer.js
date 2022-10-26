@@ -33,9 +33,9 @@ function headerPhotograph(photographer) {
   const photographLikes = document.querySelector(".photograph-likes");
   const contactPhotograph = document.querySelector(".contact-name");
 
-  photographPresentation.innerHTML = `<h1>${photograph.name}</h1>
-  <h2>${photograph.city}, ${photograph.country}</h2>
-  <p>${photograph.tagline}</p>
+  photographPresentation.innerHTML = `<h1 tabindex="2">${photograph.name}</h1>
+  <h2 tabindex="3">${photograph.city}, ${photograph.country}</h2>
+  <p tabindex="3">${photograph.tagline}</p>
   `;
 
   photographImg.setAttribute(
@@ -43,9 +43,10 @@ function headerPhotograph(photographer) {
     `/assets/photographers/${photograph.portrait}`
   );
   photographImg.setAttribute("alt", `photo de ${photograph.name}`);
+  photographImg.setAttribute("tabindex", "3");
 
-  photographLikes.innerHTML = `<p class="total-likes"></p>
-  <p>${photograph.price}€ / jour</p>`;
+  photographLikes.innerHTML = `<p class="total-likes" tabindex="8"></p>
+  <p tabindex="8">${photograph.price}€ / jour</p>`;
 
   contactPhotograph.innerHTML = `Contactez-moi ${photograph.name}`;
 }
