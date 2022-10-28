@@ -18,7 +18,7 @@ function mediaFactory(data) {
                                  <span class="article-icon empty-heart" tabindex="7" >
                                   <i class="fa-regular fa-heart"></i> 
                                  </span>
-                                 <span class="article-icon full-heart">
+                                 <span class="article-icon full-heart" tabindex="7">
                                   <i class="fa-solid fa-heart"></i> 
                                  </span>
                                 </div>   

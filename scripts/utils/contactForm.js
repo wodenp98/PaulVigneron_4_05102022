@@ -97,18 +97,9 @@ function validate() {
   }
 }
 
-function resetBorder() {
-  firstName.style.border = "none";
-  lastName.style.border = "none";
-  email.style.border = "none";
-  message.style.border = "none";
-}
-
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   validate();
-  resetBorder();
-  form.reset();
 });
 
 document.addEventListener("keydown", (e) => {
