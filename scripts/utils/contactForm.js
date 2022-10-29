@@ -94,7 +94,16 @@ function validate() {
     console.log(email.value);
     console.log(message.value);
     closeModal();
+    form.reset();
+    resetBorder();
   }
+}
+
+function resetBorder() {
+  firstName.style.border = "none";
+  lastName.style.border = "none";
+  email.style.border = "none";
+  message.style.border = "none";
 }
 
 form.addEventListener("submit", (e) => {
