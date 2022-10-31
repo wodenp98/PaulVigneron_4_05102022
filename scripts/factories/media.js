@@ -13,12 +13,12 @@ function mediaFactory(data) {
                              </a>
                              <div class="article-infos">
                                 <p class="article-title" tabindex="7">${title}</p>
-                                <div class="article-likes" aria-label="likes">
-                                <span tabindex="7">${likes}</span>
-                                 <span class="article-icon empty-heart" tabindex="7" >
+                                <div class="article-likes" aria-label="likes" tabindex="7">
+                                <span>${likes}</span>
+                                 <span class="article-icon empty-heart" >
                                   <i class="fa-regular fa-heart"></i> 
                                  </span>
-                                 <span class="article-icon full-heart" tabindex="7">
+                                 <span class="article-icon full-heart">
                                   <i class="fa-solid fa-heart"></i> 
                                  </span>
                                 </div>   
