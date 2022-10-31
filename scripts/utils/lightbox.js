@@ -11,10 +11,10 @@ function lightboxDisplay(lightSrc, lightAlt) {
   media = media[media.length - 1];
 
   if (media === "jpg") {
-    lightboxImg.innerHTML = `<img src="${lightSrc}" alt="${lightAlt}, closeup view" class="image-lightbox"/>`;
+    lightboxImg.innerHTML = `<img src="${lightSrc}" alt="${lightAlt}, closeup view" class="image-lightbox" tabindex="9"/>`;
     lightboxImg.innerHTML += `<p>${lightAlt}</p>`;
   } else {
-    lightboxImg.innerHTML = `<video controls src="${lightSrc}" alt="${lightAlt}, closeup view" class="image-lightbox" />`;
+    lightboxImg.innerHTML = `<video controls src="${lightSrc}" alt="${lightAlt}, closeup view" class="image-lightbox" tabindex="9" />`;
     lightboxImg.innerHTML += `<p>${lightAlt}</p>`;
   }
 }

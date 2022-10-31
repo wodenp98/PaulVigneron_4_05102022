@@ -19,13 +19,9 @@ function like() {
   for (let i = 0; i < emptyHeart.length; i++) {
     emptyHeart[i].addEventListener("click", (e) => {
       let heartClicked = e.path[2].children[0];
-      console.log(heartClicked);
       let heartLiked = Number(heartClicked.innerText);
-      console.log(heartLiked);
       let liked = heartLiked + 1;
-      console.log(liked);
-      heartClicked.innerHTML = heartLiked + 1;
-      console.log(heartClicked);
+      heartClicked.innerHTML = liked;
 
       if ((heartClicked = liked)) {
         emptyHeart[i].style.display = "none";
@@ -43,11 +39,11 @@ function dislike() {
   for (let i = 0; i < fullHeart.length; i++) {
     fullHeart[i].addEventListener("click", (e) => {
       let heartClicked = e.path[2].children[0];
-      let heartLiked = Number(heartClicked.innerText);
-      let liked = heartLiked - 1;
-      heartClicked.innerHTML = heartLiked - 1;
+      let heartDisLiked = Number(heartClicked.innerText);
+      let disliked = heartDisLiked - 1;
+      heartClicked.innerHTML = disliked;
 
-      if ((heartClicked = liked)) {
+      if ((heartClicked = disliked)) {
         emptyHeart[i].style.display = "inline";
         fullHeart[i].style.display = "none";
         total();
