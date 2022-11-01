@@ -68,6 +68,8 @@ function filters() {
 
   filterSystem.addEventListener("change", (e) => {
     sortMedia(e.target.value);
+    likesGlobal();
+    lightboxGlobal();
   });
 }
 
